@@ -3,6 +3,8 @@ const dropDown = document.querySelector(".dropDown");
 const dropElem = document.querySelector(".drop");
 const region = document.querySelectorAll(".region");
 const search = document.querySelector(".search");
+const toggle = document.querySelector(".toggle");
+const moon = document.querySelector(".moon");
 //console.log(region);
 
 async function getCountry()
@@ -37,7 +39,7 @@ function showCountry(data)
 dropDown.addEventListener("click",()=>{
     
     dropElem.classList.toggle("showDropDown")
-    console.log("hello");
+    //console.log("hello");
     
 })
 
@@ -48,7 +50,7 @@ region.forEach(element => {
         // console.log(element.innerText);
         console.log(element);
         Array.from(regionName).forEach(ele =>{
-            console.log(ele.innerText);
+            //console.log(ele.innerText);
             if(ele.innerText.includes(element.innerText) || element.innerText == "All"){
                 ele.parentElement.parentElement.style.display = "grid";
             }
@@ -70,4 +72,9 @@ search.addEventListener("input",()=>{
         ele.parentElement.parentElement.style.display = "none";
     }
    });
+})
+
+toggle.addEventListener("click",()=>{
+    document.body.classList.toggle("dark")
+    moon.classList.toggle("fas")
 })

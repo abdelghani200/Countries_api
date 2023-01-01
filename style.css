@@ -13,6 +13,14 @@ body{
     font-family: "Nunito Sans", sans-serif;
 }
 
+.dark{
+    --bgColor:hsl(200, 15%, 8%);
+    --fontcolor:hsl(0, 0%, 98%);
+    background: var(--bgColor);
+    color: var(--fontcolor) !important;
+    --countrybgColor:hsl(207, 26%, 17%);
+}
+
 .container{
     width: 100%;
     padding: 30px;
@@ -45,6 +53,7 @@ button{
     position: relative;
     border-radius: 5px;
     overflow: hidden;
+    background: var(--countrybgColor);
 }
 
 .form-control input{
@@ -54,6 +63,8 @@ button{
     border: 0;
     font-size: 15px;
     letter-spacing: 0.5px;
+    background: transparent;
+    color: var(--fontcolor);
 }
 
 .form-control i{
@@ -70,6 +81,7 @@ i{
 .dropDownCon{
     width: 200px;
     position: relative;
+    background: var(--countrybgColor);
 }
 
 .dropDown{
@@ -96,6 +108,7 @@ i{
     border-radius: 5px;
     background: var(--bgColor);
     cursor: pointer;
+    background: var(--countrybgColor);
 }
 
 .drop p{
@@ -115,6 +128,7 @@ i{
     width: 300px;
     border-radius: 5px;
     overflow: hidden;
+    background: var(--countrybgColor);
 }
 
 .country-img{
